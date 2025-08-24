@@ -232,6 +232,8 @@ function validateQuestions(payload) {
 
 export default function CzechQuizApp() {
   const [stage, setStage] = useState("setup"); // setup | quiz | results
+  const [questionCount, setQuestionCount] = useState(10);
+  const [useShuffle, setUseShuffle] = useState(true);
 
   const [order, setOrder] = useState([]); // indexy otázek
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -270,7 +272,7 @@ export default function CzechQuizApp() {
       const qs = validateQuestions(data);
       if (qs.length === 0) throw new Error('Soubor neobsahuje validní otázky.');
       setExternalQuestions(qs);
-      
+      setQuestionCount((n) => Math.min(n, qs.length));
       setLoadError(null);
     } catch (err) {
       setLoadError(String(err));
@@ -297,7 +299,11 @@ export default function CzechQuizApp() {
     return () => clearInterval(t);
   }, [lockedUntil]);
 
-  const questions = useMemo(() => sourceBank, [sourceBank]);
+  const questions = useMemo(() => {
+    const base = [...sourceBank];
+    const arranged = useShuffle ? shuffleArray(base) : base;
+    return arranged.slice(0, Math.min(questionCount, arranged.length));
+  }, [questionCount, useShuffle, sourceBank]);
 
   const current = questions[currentIdx];
   const progress = ((currentIdx) / Math.max(1, questions.length)) * 100;
@@ -372,7 +378,32 @@ export default function CzechQuizApp() {
 
         {stage === "setup" && (
           <div className="bg-white rounded-2xl shadow p-6 space-y-6">
-                        {/* Info o zdroji otázek + nahrání JSON */}
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="flex flex-col gap-2">
+                <span className="text-sm text-slate-600">Počet otázek</span>
+                <input
+                  type="number"
+                  min={5}
+                  max={sourceBank.length}
+                  value={questionCount}
+                  onChange={(e) => setQuestionCount(Number(e.target.value))}
+                  className="border rounded-xl px-3 py-2 focus:outline-none focus:ring w-full"
+                />
+                <span className="text-xs text-slate-500">Max {sourceBank.length}</span>
+              </label>
+
+              <label className="flex items-center gap-3">
+                <input
+                  type="checkbox"
+                  checked={useShuffle}
+                  onChange={(e) => setUseShuffle(e.target.checked)}
+                  className="h-5 w-5"
+                />
+                <span>Míchat pořadí otázek</span>
+              </label>
+            </div>
+
+            {/* Info o zdroji otázek + nahrání JSON */}
             <div className="rounded-xl bg-slate-50 p-3 text-sm text-slate-700 border">
               {loadingQuestions ? (
                 <span>Načítám externí otázky z <code>/questions.json</code>…</span>
@@ -495,13 +526,13 @@ export default function CzechQuizApp() {
                 onClick={startQuiz}
                 className="px-5 py-3 rounded-2xl bg-slate-900 text-white hover:opacity-90 transition shadow"
               >
-                Hrát znovu
+                Hrát znovu se stejným nastavením
               </button>
               <button
                 onClick={resetAll}
                 className="px-5 py-3 rounded-2xl border hover:bg-slate-50 transition shadow"
               >
-                Zpět na úvod
+                Změnit nastavení
               </button>
             </div>
 
@@ -527,64 +558,3 @@ export default function CzechQuizApp() {
     </div>
   );
 }
-
-
-/* -------------------------------------------------------
-   DOPLŇKOVÉ SOUBORY PRO PROJEKT (zkopíruj do svého repa)
-   -------------------------------------------------------
-   Vytvoř níže uvedené soubory v uvedených cestách.
-   Kód je zde v komentáři, aby nenarušil tuto komponentu.
----------------------------------------------------------
-
-FILE: src/App.jsx
----------------------------------------------------------
-import "./index.css";
-import CzechQuizApp from "./CzechQuizApp";
-
-export default function App() {
-  return <CzechQuizApp />;
-}
-
-
-FILE: vite.config.js
----------------------------------------------------------
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-
-export default defineConfig({
-  plugins: [react()],
-});
-
-
-FILE: README.md
----------------------------------------------------------
-# Kvíz o České republice – nasazení
-
-## Lokální běh
-1. `npm install` (nebo `pnpm install`)
-2. `npm run dev` → http://localhost:5173
-
-## Struktura
-- `src/CzechQuizApp.jsx` – hlavní komponenta kvízu
-- `src/App.jsx` – vstupní komponenta, rendruje kvíz
-- `public/questions.json` – externí otázky
-
-## Build & deploy (Vercel)
-- Build: `npm run build` (výstup `dist/`)
-- Vercel: **Add New → Project → Vite**, Build `npm run build`, Output `dist`
-- Po pushi na `main` se nasazuje automaticky.
-
-## Formát questions.json
-```json
-{
-  "questions": [
-    { "q": "Text otázky", "options": ["A","B","C","D"], "answer": 1, "explanation": "volitelné" }
-  ]
-}
-```
-
-## Tipy
-- Chceš-li více sad, přidej `public/questions_it.json` apod. a v kódu přepínač.
-- Pokud nasazuješ na subcestu (ne Vercel root), použij `import.meta.env.BASE_URL + 'questions.json'`.
-
---------------------------------------------------------- */

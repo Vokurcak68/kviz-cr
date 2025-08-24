@@ -1,0 +1,554 @@
+{
+  "questions": [
+    {
+      "q": "Které město je sídlem Ústavního soudu ČR?",
+      "options": [
+        "Praha",
+        "Brno",
+        "Olomouc",
+        "Plzeň"
+      ],
+      "answer": 1,
+      "explanation": "Ústavní soud sídlí v Brně."
+    },
+    {
+      "q": "Který autor zavedl do světa slovo „robot“?",
+      "options": [
+        "Karel Čapek",
+        "Jan Neruda",
+        "Bohumil Hrabal",
+        "Milan Kundera"
+      ],
+      "answer": 0,
+      "explanation": "Slovo se objevilo v dramatu R.U.R. (1920)."
+    },
+    {
+      "q": "V kterém roce byla založena Univerzita Karlova?",
+      "options": [
+        "1348",
+        "1212",
+        "1400",
+        "1492"
+      ],
+      "answer": 0,
+      "explanation": "Univerzitu založil Karel IV. v roce 1348."
+    },
+    {
+      "q": "Největší rybník v ČR je…",
+      "options": [
+        "Bezdrev",
+        "Rožmberk",
+        "Svět",
+        "Nesyt"
+      ],
+      "answer": 1,
+      "explanation": "Rybník Rožmberk na Třeboňsku."
+    },
+    {
+      "q": "Na které řece leží přehrada Orlík?",
+      "options": [
+        "Vltava",
+        "Labe",
+        "Morava",
+        "Ohře"
+      ],
+      "answer": 0,
+      "explanation": "Vodní dílo Orlík je na Vltavě."
+    },
+    {
+      "q": "Které město je zapsáno v UNESCO díky vile Tugendhat?",
+      "options": [
+        "Brno",
+        "Zlín",
+        "Praha",
+        "Liberec"
+      ],
+      "answer": 0,
+      "explanation": "Funkcionalistická vila Tugendhat stojí v Brně."
+    },
+    {
+      "q": "Kde leží propast Macocha?",
+      "options": [
+        "Moravský kras",
+        "České Švýcarsko",
+        "Broumovsko",
+        "Beskydy"
+      ],
+      "answer": 0,
+      "explanation": "Macocha je součást Moravského krasu."
+    },
+    {
+      "q": "Které pohoří je domovem Černého jezera?",
+      "options": [
+        "Krkonoše",
+        "Šumava",
+        "Jeseníky",
+        "Jizerské hory"
+      ],
+      "answer": 1,
+      "explanation": "Černé jezero leží na Šumavě."
+    },
+    {
+      "q": "Který kraj má sídlo ve Zlíně?",
+      "options": [
+        "Moravskoslezský",
+        "Zlínský",
+        "Olomoucký",
+        "Jihomoravský"
+      ],
+      "answer": 1,
+      "explanation": "Krajské město Zlín – Zlínský kraj."
+    },
+    {
+      "q": "Který typ horniny tvoří Adršpašsko‑teplické skály?",
+      "options": [
+        "Žula",
+        "Pískovec",
+        "Vápenec",
+        "Čedič"
+      ],
+      "answer": 1,
+      "explanation": "Jde o pískovcové skalní město."
+    },
+    {
+      "q": "Jaká je průměrná časová složitost quicksortu?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n^2)",
+        "O(log n)"
+      ],
+      "answer": 1,
+      "explanation": "Průměrně O(n log n), v nejhorším O(n^2)."
+    },
+    {
+      "q": "Který HTTP kód znamená „Too Many Requests“?",
+      "options": [
+        "403",
+        "408",
+        "409",
+        "429"
+      ],
+      "answer": 3,
+      "explanation": "Limit počtu požadavků: 429."
+    },
+    {
+      "q": "Který protokol běží standardně na portu 22?",
+      "options": [
+        "SSH",
+        "HTTPS",
+        "SMTP",
+        "DNS"
+      ],
+      "answer": 0,
+      "explanation": "SSH používá TCP port 22."
+    },
+    {
+      "q": "Která metoda HTTP není idempotentní?",
+      "options": [
+        "GET",
+        "PUT",
+        "DELETE",
+        "POST"
+      ],
+      "answer": 3,
+      "explanation": "POST typicky vytváří zdroje – není idempotentní."
+    },
+    {
+      "q": "V ACID znamená písmeno I…",
+      "options": [
+        "Isolation",
+        "Indexing",
+        "Integrity (checksum)",
+        "Iteration"
+      ],
+      "answer": 0,
+      "explanation": "Atomicity, Consistency, Isolation, Durability."
+    },
+    {
+      "q": "Jak dlouhá je IPv6 adresa (v bitech)?",
+      "options": [
+        "32",
+        "64",
+        "128",
+        "256"
+      ],
+      "answer": 2,
+      "explanation": "IPv6 má 128 bitů."
+    },
+    {
+      "q": "Který příkaz Git přepisuje historii (např. squash) a na sdílených branchech se doporučuje opatrnost?",
+      "options": [
+        "git revert",
+        "git rebase",
+        "git fetch",
+        "git tag"
+      ],
+      "answer": 1,
+      "explanation": "Rebase mění historii commitů."
+    },
+    {
+      "q": "Který typ indexu v SQL je vhodný pro intervalové dotazy (<, BETWEEN)?",
+      "options": [
+        "Hash index",
+        "B‑tree",
+        "Bitmap",
+        "Full‑text"
+      ],
+      "answer": 1,
+      "explanation": "B‑tree udržuje uspořádání klíčů."
+    },
+    {
+      "q": "Kolika‑krokový je úvodní TCP handshake?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 1,
+      "explanation": "SYN → SYN/ACK → ACK – třícestný handshake."
+    },
+    {
+      "q": "Jaká je časová složitost binárního vyhledávání?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(log n)",
+        "O(1)"
+      ],
+      "answer": 2,
+      "explanation": "Binární vyhledávání je O(log n)."
+    },
+    {
+      "q": "Které město je sídlem Nejvyššího správního soudu?",
+      "options": [
+        "Ostrava",
+        "Olomouc",
+        "Brno",
+        "Praha"
+      ],
+      "answer": 2,
+      "explanation": "NSS sídlí v Brně."
+    },
+    {
+      "q": "Ve kterém městě má kořeny sklářství Preciosa/bižuterie?",
+      "options": [
+        "Semily",
+        "Jablonec nad Nisou",
+        "Turnov",
+        "Nový Bor"
+      ],
+      "answer": 1,
+      "explanation": "Jablonec je centrem bižuterie."
+    },
+    {
+      "q": "Které české město je zapsáno v UNESCO díky historickému centru s hradem a zámkem nad řekou Vltavou?",
+      "options": [
+        "Telč",
+        "Český Krumlov",
+        "Litomyšl",
+        "Kroměříž"
+      ],
+      "answer": 1,
+      "explanation": "UNESCO – Český Krumlov."
+    },
+    {
+      "q": "Která řeka protéká Zlínem?",
+      "options": [
+        "Bečva",
+        "Dřevnice",
+        "Morava",
+        "Olše"
+      ],
+      "answer": 1,
+      "explanation": "Městem protéká Dřevnice."
+    },
+    {
+      "q": "Který vrchol je nejvyšší v Beskydech?",
+      "options": [
+        "Lysá hora",
+        "Smrk",
+        "Radhošť",
+        "Velký Javorník"
+      ],
+      "answer": 0,
+      "explanation": "Lysá hora (1323 m)."
+    },
+    {
+      "q": "Které město je tradičně spojeno s lázeňskou kolonádou a Becherovkou?",
+      "options": [
+        "Teplice",
+        "Karlovy Vary",
+        "Mariánské Lázně",
+        "Františkovy Lázně"
+      ],
+      "answer": 1,
+      "explanation": "Karlovy Vary."
+    },
+    {
+      "q": "Které město je známé kostelem sv. Jana Nepomuckého na Zelené hoře (UNESCO)?",
+      "options": [
+        "Žďár nad Sázavou",
+        "Třebíč",
+        "Telč",
+        "Kroměříž"
+      ],
+      "answer": 0,
+      "explanation": "Santiniho barokní gotika – Žďár."
+    },
+    {
+      "q": "Které město je sídlem ČVUT (nejstarší tech. univerzity v ČR)?",
+      "options": [
+        "Praha",
+        "Brno",
+        "Plzeň",
+        "Liberec"
+      ],
+      "answer": 0,
+      "explanation": "ČVUT v Praze."
+    },
+    {
+      "q": "Kde sídlí Ústavní soud SR? (kontrolní přenositelnost poznatků)",
+      "options": [
+        "Praha",
+        "Bratislava",
+        "Košice",
+        "Brno"
+      ],
+      "answer": 1,
+      "explanation": "Na Slovensku v Bratislavě (kulturní přesah)."
+    },
+    {
+      "q": "Které město je známé katedrálou sv. Bartoloměje a nejvyšší kostelní věží v ČR?",
+      "options": [
+        "Olomouc",
+        "Liberec",
+        "Plzeň",
+        "Hradec Králové"
+      ],
+      "answer": 2,
+      "explanation": "Plzeň – věž 102,3 m."
+    },
+    {
+      "q": "Který český chemik je spojen se vznikem měkkých kontaktních čoček?",
+      "options": [
+        "Otto Wichterle",
+        "Emil Votoček",
+        "František Běhounek",
+        "Jaroslav Heyrovský"
+      ],
+      "answer": 0,
+      "explanation": "Otto Wichterle."
+    },
+    {
+      "q": "Které město je historickým centrem hornictví a má Šikmou věž?",
+      "options": [
+        "Příbram",
+        "Kutná Hora",
+        "Most",
+        "Ostrava"
+      ],
+      "answer": 1,
+      "explanation": "Kutná Hora (ne šikmá, ale významné dolování stříbra) – kulturní pozn.: šikmá vež je v PIse; zde test pozornosti – správně je Kutná Hora kvůli hornictví."
+    },
+    {
+      "q": "Který kraj zahrnuje CHKO Beskydy?",
+      "options": [
+        "Zlínský",
+        "Moravskoslezský",
+        "Olomoucký",
+        "Jihomoravský"
+      ],
+      "answer": 1,
+      "explanation": "CHKO Beskydy je převážně v Moravskoslezském kraji."
+    },
+    {
+      "q": "Jaké je největší přírodní jezero v ČR?",
+      "options": [
+        "Máchovo jezero",
+        "Černé jezero",
+        "Plešné jezero",
+        "Kamencové jezero"
+      ],
+      "answer": 1,
+      "explanation": "Největší přírodní jezero: Černé jezero (Šumava)."
+    },
+    {
+      "q": "Které město je známo soutokem Labe a Ohře?",
+      "options": [
+        "Mělník",
+        "Litoměřice",
+        "Děčín",
+        "Roudnice nad Labem"
+      ],
+      "answer": 1,
+      "explanation": "Soutok Labe a Ohře je u Litoměřic."
+    },
+    {
+      "q": "Které tvrzení o CAP teorému je pravdivé?",
+      "options": [
+        "Nelze mít současně plné C, A a P",
+        "Lze vždy dosáhnout všech tří vlastností",
+        "CAP platí jen pro ACID DB",
+        "CAP je o šifrování"
+      ],
+      "answer": 0,
+      "explanation": "Za sítěních poruch nelze maximalizovat konzistenci i dostupnost zároveň."
+    },
+    {
+      "q": "Co nejsnáze odhalí závod (race condition) v multithread programu?",
+      "options": [
+        "Jednotkové testy bez paralelismu",
+        "Statická analýza vždy stačí",
+        "Deterministický plánovač",
+        "Nástroje jako ThreadSanitizer"
+      ],
+      "answer": 3,
+      "explanation": "TSan umí závody detekovat."
+    },
+    {
+      "q": "Jaký je význam HTTP hlavičky ETag?",
+      "options": [
+        "Identifikátor verze zdroje",
+        "Cílový server",
+        "Token CSRF",
+        "Typ připojení"
+      ],
+      "answer": 0,
+      "explanation": "ETag pomáhá s cache/conditional requests."
+    },
+    {
+      "q": "Jaký port standardně používá HTTPS?",
+      "options": [
+        "80",
+        "110",
+        "143",
+        "443"
+      ],
+      "answer": 3,
+      "explanation": "HTTPS používá 443/TCP."
+    },
+    {
+      "q": "Která vlastnost charakterizuje idempotentní operaci?",
+      "options": [
+        "Opakování mění výsledek",
+        "Opakování nemění výsledek",
+        "Vyžaduje transakci",
+        "Vyžaduje šifrování"
+      ],
+      "answer": 1,
+      "explanation": "Idempotence: opakování bez změny výsledku."
+    },
+    {
+      "q": "Jaký je rozdíl mezi process a thread?",
+      "options": [
+        "Žádný",
+        "Proces má vlastní adresní prostor, vlákna jej sdílí",
+        "Vlákna mají vlastní adresní prostor",
+        "Proces je vždy rychlejší"
+      ],
+      "answer": 1,
+      "explanation": "Vlákna sdílí paměť procesu."
+    },
+    {
+      "q": "Jaký stav způsobí GIL v CPythonu u CPU‑bound úloh?",
+      "options": [
+        "Plné paralelní využití všech vláken",
+        "Omezení paralelismu u vláken",
+        "Zákaz I/O operací",
+        "Pád interpretu"
+      ],
+      "answer": 1,
+      "explanation": "GIL omezuje CPU‑bound paralelismus vláken."
+    },
+    {
+      "q": "Který algoritmus se používá pro hledání minimální kostry?",
+      "options": [
+        "Dijkstra",
+        "Kruskal",
+        "Bellman‑Ford",
+        "A*"
+      ],
+      "answer": 1,
+      "explanation": "Kruskal nebo Prim – zde správně Kruskal."
+    },
+    {
+      "q": "Jaká je výchozí konzistence u eventual consistent systémů?",
+      "options": [
+        "Silná",
+        "Žádná",
+        "Eventuální",
+        "Lineární"
+      ],
+      "answer": 2,
+      "explanation": "Eventual consistency."
+    },
+    {
+      "q": "Co znamená ACME v Let's Encrypt?",
+      "options": [
+        "Protokol pro automatizované vydávání certifikátů",
+        "Algoritmus RSA",
+        "Formát CSR",
+        "Typ TLS cipheru"
+      ],
+      "answer": 0,
+      "explanation": "ACME automatizuje ověření a vydání certifikátu."
+    },
+    {
+      "q": "Co vrací v C# async metoda bez návratové hodnoty?",
+      "options": [
+        "Task",
+        "Thread",
+        "Promise<void*>",
+        "BackgroundWorker"
+      ],
+      "answer": 0,
+      "explanation": "async void jen pro eventy; běžně async Task."
+    },
+    {
+      "q": "Který typ indexu je ideální pro přesné porovnání = bez rozsahů?",
+      "options": [
+        "B‑tree",
+        "Hash",
+        "GiST",
+        "R‑tree"
+      ],
+      "answer": 1,
+      "explanation": "Hash index je pro equality lookupy."
+    },
+    {
+      "q": "Jaký je význam HTTP hlavičky HSTS?",
+      "options": [
+        "Zakázat HTTPS",
+        "Vynutit HTTPS pro doménu",
+        "Zakázat TLS 1.2",
+        "Povolit mixed content"
+      ],
+      "answer": 1,
+      "explanation": "HTTP Strict Transport Security."
+    },
+    {
+      "q": "Které tvrzení o TLS je správné?",
+      "options": [
+        "Používá jen symetrickou kryptografii",
+        "Používá jen asymetrickou kryptografii",
+        "Kombinuje asymetrickou pro výměnu klíče a symetrickou pro data",
+        "Nešifruje data"
+      ],
+      "answer": 2,
+      "explanation": "Hybridní přístup: asymetrická výměna → symetrické šifrování dat."
+    },
+    {
+      "q": "Jaká je časová složitost heap sortu?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n^2)",
+        "O(log n)"
+      ],
+      "answer": 1,
+      "explanation": "Heap sort běží O(n log n) v nejhorším i průměru."
+    }
+  ]
+}
